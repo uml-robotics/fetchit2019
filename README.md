@@ -1,6 +1,6 @@
 # FetchIt!
 
-Code and documentation for the competition.
+Code and documentation ran by the UMass Lowell team for the 2019  Fetchit competition.
 
 ## Get Started
 
@@ -12,7 +12,6 @@ In your catkin workspace `src` directory, clone this repo. All packages should r
 
 - Compeition: https://opensource.fetchrobotics.com/
 - Rulebook: https://opensource.fetchrobotics.com/icra-challenge/2019/01/28/fetch-it-rules.html
-- Google Group: https://groups.google.com/a/fetchrobotics.com/forum/#!forum/fetchit
 
 ## Documentation
 
