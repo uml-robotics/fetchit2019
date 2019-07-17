@@ -2,9 +2,6 @@
 
 Code and documentation for the competition.
 
-- Slack chanel: https://uml-nerve.slack.com/messages/CG5TL8MHC/
-- Team description: https://docs.google.com/document/d/1Ouy6AaM5T8iK34fxeYcMGOKR8AwfCvuKSXNNPbpr_fA/edit
-
 ## Get Started
 
 Set up your environment: [doc/env_setup.md](doc/env_setup.md).
