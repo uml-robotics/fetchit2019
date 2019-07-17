@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+<!--    FIXME uncomment when running on robot or with better wireless connection -->
+<!--    <include file="$(find navigation)/launch/navigation.launch">-->
+<!--        <arg name="mapfile">$(rospack find navigation)/maps/reza-lab/4-28.yaml</arg>-->
+<!--    </include>-->
+
+<!--    roslaunch caddy_manipulation move_group.launch allow_active_sensing:=true moveit_octomap_sensor_params_file:=$(rospack find caddy_manipulation)/config/octomap.yaml-->
+    <include file="$(find caddy_manipulation)/launch/move_group.launch">
+        <arg name="allow_active_sensing" value="true" />
+        <arg name="moveit_octomap_sensor_params_file" value="$(find caddy_manipulation)/config/octomap.yaml" />
+    </include>
+    <node name="test_course_node" type="test_course_node" pkg="main" required="true" output="screen" />
+</launch>

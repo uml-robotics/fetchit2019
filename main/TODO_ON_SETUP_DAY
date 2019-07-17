@@ -1,0 +1,25 @@
+Map arena
+```
+roslaunch fetch_navigation build_map.launch
+roscd navigation/config/default/ && rviz -d *rviz
+roscd navigation/maps/arena/
+rosrun map_server map_saver -f 1
+rosrun map_server map_saver -f 2
+
+# change .yaml file: origin to 0, 0, 0
+# change competition.tmux.conf & README
+```
+Use Gimp to edit the map
+test arena: `rosrun main test_nav`
+
+
+## Enable chuck open/close
+In `insert_large_gear/src/LargeGearInserting.cpp`, uncomment SchunkMachine open/close code in `insert()` & `remove()` method
+
+## Enable sick camera inspection
+In `PlacingCaddy.cpp`
+
+
+?? try nav first. In `Arena.h`, change `get_schunk_table_pose_to_see_chuck()` back
+
+copy .tmux.conf to the robots

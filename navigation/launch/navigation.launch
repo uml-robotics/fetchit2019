@@ -1,0 +1,13 @@
+<launch>
+
+  <arg name="map" default="fetchit_map" />
+  <arg name="mapfile" default="$(find navigation)/maps/$(arg map)/$(arg map).yaml" />
+  <!-- Change config to use in amcl/move_base includes -->
+
+  <include file="$(find fetch_navigation)/launch/fetch_nav.launch" >
+    <arg name="map_file" value="$(arg mapfile)" />
+    <arg name="move_base_include" value="$(find navigation)/launch/include/move_base.launch.xml" />
+    <arg name="amcl_include" value="$(find navigation)/launch/include/amcl.launch.xml" />
+  </include>
+
+</launch>

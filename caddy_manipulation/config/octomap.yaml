@@ -1,0 +1,8 @@
+octomap_resolution: 0.01
+sensors:
+  - sensor_plugin: occupancy_map_monitor/PointCloudOctomapUpdater
+    point_cloud_topic: /rh/points_for_moveit_octomap
+    max_range: 1.5
+    point_subsample: 1
+    padding_offset: 0.01
+    padding_scale: 1.0

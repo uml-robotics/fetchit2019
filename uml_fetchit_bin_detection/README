@@ -1,0 +1,27 @@
+to run simply
+rosrun uml_fetchit_bin_detection widget_detect_and_grab
+
+There are useful service calls you can use from the command line
+
+To enable sensing at a table
+rosservvice call 
+rosservice call /gearbox/enable_screw_sensing std_srvs/Bool 
+rosservice call /gearbox/enable_gear_sensing std_srvs/Bool 
+rosservice call /gearbox/enable_gearbox_sensing std_srvs/Bool
+
+it is best to disable sensing after you have finished, before leaving the table
+rosservice call /gearbox/disable_sensing std_srvs/Bool
+
+to pick a piece, while sensing is enabled
+rosservice call /gearbox/grasp_top std_srvs/Bool
+rosservice call /gearbox/grasp_bottom std_srvs/Bool
+rosservice call /gearbox/grasp_screw std_srvs/Bool
+
+In rviz, there are several point clouds published at varrying levels of processing.
+The two most useful are 
+
+/objects_cloud
+which shows the clusters of objects detected and
+
+/gears_cloud
+which shows the actual detected objects, after additional logic has been applied such as expected height and length of the clusters

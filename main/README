@@ -1,0 +1,34 @@
+# Prepare
+
+// turn the RGBD camera on, or you'll get corrupted point cloud
+rostopic hz /head_camera/depth_downsample/points
+rostopic hz /head_camera/depth_registered/points
+
+// run in an empty space
+rosrun fetch_teleop tuck_arm.py
+
+## local
+roscd navigation/config/default/ && rviz -d *rviz
+
+
+## remote
+
+### reza's lab
+roslaunch navigation navigation.launch mapfile:=$(rospack find navigation)/maps/reza-lab/5-6.yaml
+
+### Fetch's arena
+roslaunch navigation navigation.launch mapfile:=$(rospack find navigation)/maps/arena/4-30.yaml
+
+### Competition arena
+roslaunch navigation navigation.launch mapfile:=$(rospack find navigation)/maps/arena/1.yaml
+roslaunch navigation navigation.launch mapfile:=$(rospack find navigation)/maps/arena/2.yaml
+
+
+roslaunch caddy_manipulation move_group.launch allow_active_sensing:=true moveit_octomap_sensor_params_file:=$(rospack find caddy_manipulation)/config/octomap.yaml
+
+## local
+roscd caddy_manipulation && rviz -d moveit.rviz
+
+
+# Run
+rosrun main test_course_node
