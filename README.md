@@ -12,6 +12,7 @@ In your catkin workspace `src` directory, clone this repo. All packages should r
 
 - Compeition: https://opensource.fetchrobotics.com/
 - Rulebook: https://opensource.fetchrobotics.com/icra-challenge/2019/01/28/fetch-it-rules.html
+- Arena dimension: [doc/fetchit_arena_dimension.png](doc/fetchit_arena_dimension.png)
 
 ## Documentation
 
